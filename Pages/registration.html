@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+    <meta http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" href="../Styling/style.css">
+    <link rel='shortcut icon' type='image/x-icon' href='../Images/favicon.ico' />
+    <title>DateIT</title>
+</head>
+
+<body id="registration">
+    <header>
+        <h1>Aanmelden bij FishR</h1>
+    </header>
+    <main>
+        <section>
+            <article>
+                <form action="loading-registration.html" id="registration">
+                    <fieldset id="personalia">
+                        <legend>Personalia</legend>
+                        <label for="voornaam">Voornaam</label>
+                        <input type="text" required name='voornaam' id="voornaam" placeholder='B.v Rob'>
+                        <label for="achternaam ">Achternaam</label>
+                        <input type="text" required name='achternaam' id="achternaam" placeholder="B.v de Vries ">
+                        <label for="geboortedatum ">Geboortedatum</label>
+                        <input type="date" required id="gebDatum" name="geboortedatum">
+                    </fieldset>
+                    <fieldset id="voorkeur">
+                        <legend>Voorkeur:</legend>
+                        <input type="radio" name='voorkeur' id="witvis" value="witvis" checked>
+                        <label for="witvis">Witvis</label>
+                        <input type="radio" name='voorkeur' id="roofvis" value="roofvis">
+                        <label for="roofvis">Roofvis</label>
+                        <input type="radio" name='voorkeur' id="beiden" value="beiden">
+                        <label for="beiden">Beiden</label>
+                    </fieldset>
+                    <fieldset id="inloggegevens">
+                        <legend>Inloggegevens</legend>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required name="email" minlength="6 " maxlength="60 " placeholder="B.v blabla@outlook.com ">
+                        <label for='wachtwoord'>Wachtwoord</label>
+                        <input type="password" id="wachtwoord" required name="wachtwoord" minlength="6 " placeholder="Minimaal 6 tekens ">
+                    </fieldset>
+                    <input type="submit" id="submit" value="Registreren">
+                </form>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <script type="text/javascript" src="../Scripts/registreren.js"></script>
+        <h2><a href="https://rodneydeboer.github.io/fe2-assesment/">FishR</a></h2>
+    </footer>
+</body>
+
+</html>
