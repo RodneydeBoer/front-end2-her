@@ -23,10 +23,11 @@ checkLogin();
 submit.addEventListener('click', function(e) {
     e.preventDefault()
     store();
-    console.log(localStorage);
     checkLogin();
+    console.log(localStorage);
 })
 
+// checking if localstorage has data, and if it does it redirects back to login
 function checkLogin() {
     console.log(localStorage);
     if (localStorage.getItem("email") === null) {

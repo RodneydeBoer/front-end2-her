@@ -36,6 +36,7 @@ function validateForm() {
     }
 }
 
+// Function to check the validation at each keydown event, so it auto refreshes
 form.addEventListener('keydown', function() {
     validateForm();
     if (fieldvalidate == true) {
@@ -45,6 +46,7 @@ form.addEventListener('keydown', function() {
     }
 });
 
+// This function checks the input value with stored data in localstorage to perform a login action
 function check() {
     let storedEmail = localStorage.getItem('email');
     let storedPw = localStorage.getItem('pw');
