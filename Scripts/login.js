@@ -1,4 +1,3 @@
-//checking
 let form = document.querySelector('form'),
     email = document.getElementById('email'),
     password = document.getElementById('wachtwoord'),
@@ -6,9 +5,11 @@ let form = document.querySelector('form'),
     existingAccount = false,
     fieldvalidate = false;
 
+// calls functions that need to be executed right away
 checkAccount();
 validateForm();
 
+// function on submit button click that calls the login verification function and more
 submit.addEventListener('click', function(e) {
     e.preventDefault()
     check();
@@ -16,7 +17,7 @@ submit.addEventListener('click', function(e) {
     checkAccount();
 })
 
-
+// Tests if there is an existing account in Localstorage
 function checkAccount() {
     console.log(localStorage);
     if (localStorage.getItem("email") === null) {
@@ -26,6 +27,7 @@ function checkAccount() {
     }
 }
 
+// Validates data in form. The submit button is disabled untill there is some value in the inputs
 function validateForm() {
     if (email.value && password.value) {
         fieldvalidate = true;
