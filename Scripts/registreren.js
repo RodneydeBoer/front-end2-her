@@ -1,12 +1,14 @@
-let fieldset = document.getElementsByTagName('fieldset');
-let form = document.querySelector('form');
-let firstName = document.getElementById('voornaam');
-let lastName = document.getElementsByName('voorkeur');
-let preference = document.getElementById('achternaam');
-let dateBirth = document.getElementById('gebDatum');
-let submit = document.getElementById('submit');
-let textvalidate = false;
-let fieldvalidate = false;
+let fieldset = document.getElementsByTagName('fieldset'),
+    form = document.querySelector('form'),
+    firstName = document.getElementById('voornaam'),
+    lastName = document.getElementsByName('voorkeur'),
+    preference = document.getElementById('achternaam'),
+    dateBirth = document.getElementById('gebDatum'),
+    email = document.getElementById('email'),
+    email = document.getElementById('email'),
+    submit = document.getElementById('submit'),
+    textvalidate = false,
+    fieldvalidate = false;
 const numbers = /^[0-9]+$/;
 
 // Hiding second fieldset for now
