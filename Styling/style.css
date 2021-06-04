@@ -1,267 +1,248 @@
-@import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,500,600,700,800,900&display=swap');
-@font-face {
-    font-family: 'impact';
-    src: url('fonts/impact.ttf');
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-
-/* body */
-
-body {
-    background-color: #355000;
-    font-family: 'maven pro';
-}
-
-main,
-footer {
-    display: block;
-}
-
-
-/* tekst */
-
-h1 {
-    font-family: 'impact';
-    font-weight: bold;
-}
-
-h1,
-h2,
-h3 {
-    font-weight: 400;
-    color: white;
-    text-align: center;
-}
-
-h2 a {
-    font-weight: 400;
-    color: white;
-    text-align: center;
-}
-
-p {
-    color: #FEEBEB;
-    text-align: center;
-    margin: 15px 5px;
-}
-
-
-/* header */
-
-body>header {
-    padding: 20px 0px;
-    margin-bottom: 25px;
-}
-
-body#registration header {
-    margin-bottom: 5px;
-}
-
-
-/* main */
-
-ul.error {
-    background-color: #ef4200;
-    padding: 10px 30px;
-    color: white;
-    font-size: 20px;
-    list-style: none;
-    max-width: max-content;
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-ul.succes {
-    background-color: #009c30;
-    padding: 10px 30px;
-    color: white;
-    font-size: 20px;
-    list-style: none;
-    max-width: max-content;
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-main {
-    width: 80%;
-    margin: auto;
-    padding: 30px 5px;
-}
-
-body#registration main {
-    padding: 10px 5px 30px 5px;
-}
-
-main.succes {
-    text-align: center;
-}
-
-.accountlinks {
-    text-align: center;
-    color: white;
-    font-size: 18px;
-    list-style: none;
-    margin: 30px 10px;
-}
-
-.accountlinks li {
-    margin: 15px 5px;
-}
-
-.accountlinks a {
-    color: white!important;
-}
-
-img {
-    width: 100%;
-    max-width: 300px;
-}
-
-img.succesicon {
-    width: 100%;
-    max-width: 150px;
-}
-
-#registratiestart {
-    margin: 20px 0px;
-    text-align: center;
-}
-
-#registratiebutton {
-    padding: 15px 40px;
-    background-color: #ffab3d00;
-    border-radius: 20px;
-    margin: 20px 10px;
-    display: inline-block;
-    color: #ffffff;
-    border: 3px solid #FF9200;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-#registratiebutton:hover {
-    background-color: #FF9200;
-}
-
-
-/* forms */
-
-form {
-    max-width: 600px;
-    margin: auto;
-}
-
-input[type=text],
-input[type=email],
-input[type=password],
-input[type=date] {
-    border: 3px solid #FF9200;
-    padding: 4px 15px;
-    font-size: 16px;
-    color: #355000!important;
-    font-weight: bold;
-    opacity: 0.8;
-}
-
-fieldset {
-    border: 0;
-    color: white;
-    margin: 30px 0px;
-    border-bottom: 3px solid white;
-    padding: 0px 0px 25px 0px
-}
-
-legend {
-    text-align: center;
-    padding: 10px;
-    font-size: 2rem;
-}
-
-input:valid {
-    border: 5px solid #88FF9F;
-    opacity: 1;
-    background-color: white;
-}
-
-input:focus {
-    padding: 30px 15px;
-    opacity: 1;
-}
-
-input[type=radio] {
-    display: inline-block;
-    vertical-align: middle;
-    margin: auto;
-    opacity: 0;
-    position: fixed;
-    width: 0;
-}
-
-fieldset:nth-child(2) label {
-    display: inline-block;
-    cursor: pointer;
-    background-color: #ddd;
-    padding: 15px 25px;
-    font-family: sans-serif, Arial;
-    font-size: 16px;
-    border: 2px solid #444;
-    border-radius: 4px;
-}
-
-fieldset:nth-child(2) label:hover {
-    border: 4px solid #4c4;
-}
-
-fieldset:nth-child(2) input[type="radio"]:checked+label {
-    background-color: #007241;
-    border-color: #4c4;
-}
-
-input[type=submit] {
-    background-color: #FF9200;
-    font-size: 20px;
-    color: white;
-    border: 0;
-    text-transform: uppercase;
-}
-
-input[type=submit]:hover {
-    background-color: #FFAD40;
-}
-
- ::placeholder {
-    color: #555555;
-    font-size: 16px;
-    opacity: 0.55;
-    font-weight: lighter;
-}
-
-form input {
-    cursor: pointer;
-    height: 3.2rem;
-    display: block;
-    margin: 20px 0px;
-    width: 100%;
-    border-radius: 20px;
-    box-sizing: border-box;
-    font-family: 'maven pro';
-}
-
-
-/* footer */
-
-footer {
-    text-align: center;
-    bottom: 0;
-    height: 50px;
-    width: 100%;
-    display: inline-block;
-    margin: auto;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+  * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+  }
+  /* body */
+  
+  body {
+      background-color: #355000;
+  }
+  
+  main,
+  footer {
+      display: block;
+  }
+  /* tekst */
+  
+  h1 {
+      font-weight: bold;
+  }
+  
+  h1,
+  h2,
+  h3 {
+      font-weight: 400;
+      color: white;
+      text-align: center;
+  }
+  
+  h2 a {
+      font-weight: 400;
+      color: white;
+      text-align: center;
+  }
+  
+  p {
+      color: #FEEBEB;
+      text-align: center;
+      margin: 15px 5px;
+  }
+  /* header */
+  
+  body>header {
+      padding: 20px 0px;
+      margin-bottom: 25px;
+  }
+  
+  body#registration header {
+      margin-bottom: 5px;
+  }
+  /* main */
+  
+  ul.error {
+      background-color: #ef4200;
+      padding: 10px 30px;
+      color: white;
+      font-size: 20px;
+      list-style: none;
+      max-width: max-content;
+      margin: auto;
+      margin-top: 30px;
+      margin-bottom: 30px;
+  }
+  
+  ul.succes {
+      background-color: #009c30;
+      padding: 10px 30px;
+      color: white;
+      font-size: 20px;
+      list-style: none;
+      max-width: max-content;
+      margin: auto;
+      margin-top: 30px;
+      margin-bottom: 30px;
+  }
+  
+  main {
+      width: 80%;
+      margin: auto;
+      padding: 30px 5px;
+  }
+  
+  body#registration main {
+      padding: 10px 5px 30px 5px;
+  }
+  
+  main.succes {
+      text-align: center;
+  }
+  
+  .accountlinks {
+      text-align: center;
+      color: white;
+      font-size: 18px;
+      list-style: none;
+      margin: 30px 10px;
+  }
+  
+  .accountlinks li {
+      margin: 15px 5px;
+  }
+  
+  .accountlinks a {
+      color: white!important;
+  }
+  
+  img {
+      width: 100%;
+      max-width: 300px;
+  }
+  
+  img.succesicon {
+      width: 100%;
+      max-width: 150px;
+  }
+  
+  #registratiestart {
+      margin: 20px 0px;
+      text-align: center;
+  }
+  
+  #registratiebutton {
+      padding: 15px 40px;
+      background-color: #ffab3d00;
+      border-radius: 20px;
+      margin: 20px 10px;
+      display: inline-block;
+      color: #ffffff;
+      border: 3px solid #FF9200;
+      text-decoration: none;
+      text-transform: uppercase;
+  }
+  
+  #registratiebutton:hover {
+      background-color: #FF9200;
+  }
+  /* forms */
+  
+  form {
+      max-width: 600px;
+      margin: auto;
+  }
+  
+  input[type=text],
+  input[type=email],
+  input[type=password],
+  input[type=date] {
+      border: 3px solid #FF9200;
+      padding: 4px 15px;
+      font-size: 16px;
+      color: #355000!important;
+      font-weight: bold;
+      opacity: 0.8;
+  }
+  
+  fieldset {
+      border: 0;
+      color: white;
+      margin: 30px 0px;
+      border-bottom: 3px solid white;
+      padding: 0px 0px 25px 0px;
+  }
+  
+  legend {
+      text-align: center;
+      padding: 10px;
+      font-size: 2rem;
+  }
+  
+  input:valid {
+      border: 5px solid #88FF9F;
+      opacity: 1;
+      background-color: white;
+  }
+  
+  input:focus {
+      padding: 30px 15px;
+      opacity: 1;
+  }
+  
+  input[type=radio] {
+      display: inline-block;
+      vertical-align: middle;
+      margin: auto;
+      opacity: 0;
+      position: fixed;
+      width: 0;
+  }
+  
+  fieldset:nth-child(2) label {
+      display: inline-block;
+      cursor: pointer;
+      background-color: #ddd;
+      padding: 15px 25px;
+      font-family: sans-serif, Arial;
+      font-size: 16px;
+      border: 2px solid #444;
+      border-radius: 4px;
+  }
+  
+  fieldset:nth-child(2) label:hover {
+      border: 4px solid #4c4;
+  }
+  
+  fieldset:nth-child(2) input[type="radio"]:checked+label {
+      background-color: #007241;
+      border-color: #4c4;
+  }
+  
+  input[type=submit] {
+      background-color: #FF9200;
+      font-size: 20px;
+      color: white;
+      border: 0;
+      text-transform: uppercase;
+  }
+  
+  input[type=submit]:hover {
+      background-color: #FFAD40;
+  }
+  
+   ::placeholder {
+      color: #555555;
+      font-size: 16px;
+      opacity: 0.55;
+      font-weight: lighter;
+  }
+  
+  form input {
+      cursor: pointer;
+      height: 3.2rem;
+      display: block;
+      margin: 20px 0px;
+      width: 100%;
+      border-radius: 20px;
+      box-sizing: border-box;
+  }
+  /* footer */
+  
+  footer {
+      text-align: center;
+      bottom: 0;
+      height: 50px;
+      width: 100%;
+      display: inline-block;
+      margin: auto;
+  }
