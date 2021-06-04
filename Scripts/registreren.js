@@ -5,10 +5,11 @@ let fieldset = document.getElementsByTagName('fieldset'),
     preference = document.getElementById('achternaam'),
     dateBirth = document.getElementById('gebDatum'),
     email = document.getElementById('email'),
-    email = document.getElementById('email'),
+    password = document.getElementById('wachtwoord'),
     submit = document.getElementById('submit'),
     textvalidate = false,
-    fieldvalidate = false;
+    fieldvalidate = false,
+    loggedIN = false;
 const numbers = /^[0-9]+$/;
 
 // Hiding second fieldset for now
@@ -47,15 +48,17 @@ form.addEventListener('keydown', function() {
     }
 });
 
-// Storing the login-data to local storage to check at login
+// Storing the user-data to local storage to create account in local storage (database mimic)
 function store() {
-
-    if (name.value.length == 0) {
-        alert('Please fill in email');
-
+    if (email.value.length == 0 && password.value.length == 0) {
+        alert('Voer email + wachtwoord in');
     } else {
-        localStorage.setItem('name', name.value);
-        localStorage.setItem('pw', pw.value);
+        localStorage.setItem('firstname', firstName.value);
+        localStorage.setItem('lastname', lastName.value);
+        localStorage.setItem('datebirth', dateBirth.value);
+        localStorage.setItem('preference', preference.value);
+        localStorage.setItem('email', email.value);
+        localStorage.setItem('pw', password.value);
         alert('Your account has been created');
     }
 }
