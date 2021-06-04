@@ -56,6 +56,7 @@ function check() {
     if (existingAccount == true) {
         if (email.value == storedEmail && password.value == storedPw) {
             alert('Gelukt! Je bent nu ingelogd');
+            location.href = '/pages/readytostart.html';
         } else {
             alert('Verkeerde gegevens');
         }

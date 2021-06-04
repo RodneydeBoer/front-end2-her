@@ -80,7 +80,7 @@ function store() {
         localStorage.setItem('preference', preference.value);
         localStorage.setItem('email', email.value);
         localStorage.setItem('pw', password.value);
-        location.href = '/index.html';
         alert('Account aangemaakt. Log in en vind jouw vismaat');
+        location.href = '/index.html';
     }
 }
