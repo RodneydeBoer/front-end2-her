@@ -11,6 +11,7 @@ const numbers = /^[0-9]+$/;
 
 // Hiding second fieldset for now
 fieldset[1].style.display = "none";
+fieldset[2].style.display = "none";
 submit.style.display = "none";
 
 // Function to check if the input contains numbers
@@ -39,6 +40,7 @@ form.addEventListener('keydown', function() {
 
     if (fieldvalidate) {
         fieldset[1].style.display = "block";
+        fieldset[2].style.display = "block";
         submit.style.display = "block";
     }
 });
