@@ -1,21 +1,41 @@
 let fieldset = document.getElementsByTagName('fieldset'),
     form = document.querySelector('form'),
     firstName = document.getElementById('voornaam'),
-    lastName = document.getElementsByName('voorkeur'),
-    preference = document.getElementById('achternaam'),
+    preference = document.querySelector('input[name="voorkeur"]:checked'),
+    lastName = document.getElementById('achternaam'),
     dateBirth = document.getElementById('gebDatum'),
     email = document.getElementById('email'),
     password = document.getElementById('wachtwoord'),
     submit = document.getElementById('submit'),
     textvalidate = false,
-    fieldvalidate = false,
-    loggedIN = false;
+    fieldvalidate = false;
 const numbers = /^[0-9]+$/;
 
 // Hiding second fieldset for now
 fieldset[1].style.display = "none";
 fieldset[2].style.display = "none";
 submit.style.display = "none";
+
+// automatic check for loggedin user
+checkLogin();
+
+// disabling submit and call store function on click
+submit.addEventListener('click', function(e) {
+    e.preventDefault()
+    store();
+    console.log(localStorage);
+    checkLogin();
+})
+
+function checkLogin() {
+    console.log(localStorage);
+    if (localStorage.getItem("email") === null) {
+
+    } else {
+        alert('Je hebt al een account. U wordt nu doorgestuurd');
+        location.href = '/index.html';
+    }
+}
 
 // Function to check if the input contains numbers
 function verifyInput() {
@@ -59,6 +79,7 @@ function store() {
         localStorage.setItem('preference', preference.value);
         localStorage.setItem('email', email.value);
         localStorage.setItem('pw', password.value);
-        alert('Your account has been created');
+        location.href = '/index.html';
+        alert('Account aangemaakt. Log in en vind jouw vismaat');
     }
 }
