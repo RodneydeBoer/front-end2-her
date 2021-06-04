@@ -32,6 +32,7 @@ function validateForm() {
     } else {
         submit.disabled = true
         submit.style.opacity = "0.5";
+        submit.style.cursor = "not-allowed";
     }
 }
 
@@ -40,6 +41,7 @@ form.addEventListener('keydown', function() {
     if (fieldvalidate == true) {
         submit.disabled = false
         submit.style.opacity = "1";
+        submit.style.cursor = "pointer";
     }
 });
 
