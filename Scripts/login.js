@@ -57,11 +57,20 @@ function check() {
         if (email.value == storedEmail && password.value == storedPw) {
             alert('Gelukt! Je bent nu ingelogd');
             location.href = '/pages/readytostart.html';
+        } else if (email.value !== storedEmail && password.value == storedPw) {
+            email.style.border = "5px solid orange";
+            alert('Email is onjuist');
+        } else if (email.value == storedEmail && password.value !== storedPw) {
+            password.style.border = "5px solid orange";
+            alert('Onjuist wachtwoord!');
         } else {
-            alert('Verkeerde gegevens');
+            alert('Account niet herkent of niet gevonden');
+            password.style.border = "5px solid orange";
+            email.style.border = "5px solid orange";
         }
+
     } else {
         alert('Er bestaat nog geen account. Registreer je account nu');
         location.href = '/index.html';
     }
-}
+};
