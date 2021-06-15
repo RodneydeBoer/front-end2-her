@@ -55,7 +55,7 @@ function check() {
     if (existingAccount == true) {
         notification.classList.replace('none', 'block');
         if (email.value == storedEmail && password.value == storedPw) {
-            location.href = '/pages/readytostart.html';
+            location.href = 'Pages/readytostart.html';
         } else if (email.value !== storedEmail && password.value == storedPw) {
             email.classList.add('wronginput');
             notification.classList.add('error');
