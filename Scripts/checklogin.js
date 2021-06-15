@@ -13,6 +13,7 @@ function checkAccount() {
 }
 
 deleteBtn.addEventListener('click', function(e) {
+    e.preventDefault()
     if (existingAccount == true) {
         localStorage.clear();
     }
