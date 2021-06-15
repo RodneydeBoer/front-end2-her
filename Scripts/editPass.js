@@ -7,7 +7,7 @@ checkAccount();
 function checkAccount() {
     console.log(localStorage);
     if (localStorage.email == null) {
-        location.href = '/index.html';
+        location.href = 'https://rodneydeboer.github.io/front-end2-her/';
     } else {
         existingAccount = true;
     }

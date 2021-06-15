@@ -89,6 +89,6 @@ function store() {
         localStorage.setItem('preference', preference.value);
         localStorage.setItem('email', email.value);
         localStorage.setItem('pw', password.value);
-        location.href = '/index.html';
+        location.href = 'https://rodneydeboer.github.io/front-end2-her/';
     }
 }
