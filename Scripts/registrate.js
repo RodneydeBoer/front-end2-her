@@ -38,7 +38,7 @@ function checkLogin() {
         fieldset[0].classList.add('none');
         notification.classList.add('error');
         notification.classList.replace('none', 'block');
-        notification.innerHTML = "Je hebt al een account. <a href='/index.html '> Log hier in</a>";
+        notification.innerHTML = "Je hebt al een account. <a href='https://rodneydeboer.github.io/front-end2-her/'> Log hier in</a>";
     }
 }
 
