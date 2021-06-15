@@ -3,18 +3,19 @@ let fieldset = document.getElementsByTagName('fieldset'),
     firstName = document.getElementById('firstName'),
     preference = document.querySelector('input[name="preference"]:checked'),
     lastName = document.getElementById('lastName'),
-    dateBirth = document.getElementById('dateOfbirth'),
+    dateBirth = document.getElementById('dateOfBirth'),
     email = document.getElementById('email'),
     password = document.getElementById('password'),
     submit = document.getElementById('registrateBtn'),
+    notification = document.getElementById('notification'),
     textvalidate = false,
     fieldvalidate = false;
 const numbers = /^[0-9]+$/;
 
 // Hiding second fieldset for now
-fieldset[1].style.display = "none";
-fieldset[2].style.display = "none";
-submit.style.display = "none";
+fieldset[1].classList.add('none');
+fieldset[2].classList.add('none');
+submit.classList.add('none');
 
 // automatic check for loggedin user
 checkLogin();
@@ -63,9 +64,9 @@ form.addEventListener('keydown', function() {
     validateFieldset1();
 
     if (fieldvalidate) {
-        fieldset[1].style.display = "block";
-        fieldset[2].style.display = "block";
-        submit.style.display = "block";
+        fieldset[1].classList.replace("none", "block");
+        fieldset[2].classList.replace("none", "block");
+        submit.classList.replace("none", "block");
     }
 });
 

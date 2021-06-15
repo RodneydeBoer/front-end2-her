@@ -1,5 +1,5 @@
 let existingAccount = false,
-    voornaam = document.getElementById('voornaam');
+    voornaam = document.getElementById('firstName');
 checkAccount();
 
 function checkAccount() {
