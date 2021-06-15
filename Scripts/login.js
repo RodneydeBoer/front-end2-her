@@ -1,7 +1,7 @@
 let form = document.querySelector('form'),
     email = document.getElementById('email'),
-    password = document.getElementById('wachtwoord'),
-    submit = document.getElementById('inlogknop'),
+    password = document.getElementById('password'),
+    submit = document.getElementById('loginBtn'),
     existingAccount = false,
     fieldvalidate = false;
 

@@ -1,12 +1,12 @@
 let fieldset = document.getElementsByTagName('fieldset'),
     form = document.querySelector('form'),
-    firstName = document.getElementById('voornaam'),
-    preference = document.querySelector('input[name="voorkeur"]:checked'),
-    lastName = document.getElementById('achternaam'),
-    dateBirth = document.getElementById('gebDatum'),
+    firstName = document.getElementById('firstName'),
+    preference = document.querySelector('input[name="preference"]:checked'),
+    lastName = document.getElementById('lastName'),
+    dateBirth = document.getElementById('dateOfbirth'),
     email = document.getElementById('email'),
-    password = document.getElementById('wachtwoord'),
-    submit = document.getElementById('submit'),
+    password = document.getElementById('password'),
+    submit = document.getElementById('registrateBtn'),
     textvalidate = false,
     fieldvalidate = false;
 const numbers = /^[0-9]+$/;
