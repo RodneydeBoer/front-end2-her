@@ -1,14 +1,19 @@
 let existingAccount = false,
-    firstName = document.getElementById('firstName');
+    deleteBtn = document.getElementById('deleteAcc');
+
 checkAccount();
 
 function checkAccount() {
     console.log(localStorage);
-    if (localStorage.getItem("email") === null) {
-        alert('Je moet eerst inloggen');
+    if (localStorage.email == null) {
         location.href = '/index.html';
     } else {
         existingAccount = true;
-        firstName.innerHTML = localStorage.firstname;
     }
 }
+
+deleteBtn.addEventListener('click', function(e) {
+    if (existingAccount == true) {
+        localStorage.clear();
+    }
+})

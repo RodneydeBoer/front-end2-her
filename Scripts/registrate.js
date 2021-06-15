@@ -79,7 +79,9 @@ form.addEventListener('keydown', function() {
 // Storing the user-data to local storage to create account in local storage (database mimic)
 function store() {
     if (email.value.length == 0 && password.value.length == 0) {
-        alert('Voer email + wachtwoord in');
+        notification.classList.add('error');
+        notification.classList.replace('none', 'block');
+        notification.innerHTML = "Please add email + password";
     } else {
         localStorage.setItem('firstname', firstName.value);
         localStorage.setItem('lastname', lastName.value);
@@ -87,7 +89,6 @@ function store() {
         localStorage.setItem('preference', preference.value);
         localStorage.setItem('email', email.value);
         localStorage.setItem('pw', password.value);
-        alert('Account aangemaakt. Log in en vind jouw vismaat');
         location.href = '/index.html';
     }
 }
