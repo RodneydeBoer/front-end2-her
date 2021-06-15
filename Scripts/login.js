@@ -75,6 +75,6 @@ function check() {
         notification.classList.add('error');
         notification.classList.replace('none', 'block');
         notification.innerHTML = "No existing account, please create one";
-        location.href = '/index.html';
+        location.href = 'index.html';
     }
 };
