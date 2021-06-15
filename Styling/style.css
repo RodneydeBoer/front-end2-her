@@ -34,6 +34,10 @@
     background-color: #008000bd;
 }
 
+.wronginput {
+    border: 4px solid orange!important;
+}
+
 
 /* body */
 

@@ -2,6 +2,7 @@ let form = document.querySelector('form'),
     email = document.getElementById('email'),
     password = document.getElementById('password'),
     submit = document.getElementById('loginBtn'),
+    notification = document.getElementById('notification'),
     existingAccount = false,
     fieldvalidate = false;
 
@@ -48,27 +49,32 @@ form.addEventListener('keydown', function() {
 
 // This function checks the input value with stored data in localstorage to perform a login action
 function check() {
-    let storedEmail = localStorage.getItem('email');
-    let storedPw = localStorage.getItem('pw');
+    let storedEmail = localStorage.email;
+    let storedPw = localStorage.pw;
 
     if (existingAccount == true) {
+        notification.classList.replace('none', 'block');
         if (email.value == storedEmail && password.value == storedPw) {
-            alert('Gelukt! Je bent nu ingelogd');
             location.href = '/pages/readytostart.html';
         } else if (email.value !== storedEmail && password.value == storedPw) {
-            email.style.border = "5px solid orange";
-            alert('Email is onjuist');
+            email.classList.add('wronginput');
+            notification.classList.add('error');
+            notification.innerHTML = "Email not recognized";
         } else if (email.value == storedEmail && password.value !== storedPw) {
-            password.style.border = "5px solid orange";
-            alert('Onjuist wachtwoord!');
+            password.classList.add('wronginput');
+            notification.classList.add('error');
+            notification.innerHTML = "Wrong password";
         } else {
-            alert('Account niet herkent of niet gevonden');
-            password.style.border = "5px solid orange";
-            email.style.border = "5px solid orange";
+            email.classList.add('wronginput');
+            password.classList.add('wronginput');
+            notification.classList.add('error');
+            notification.innerHTML = "Account not found. Please create one";
         }
 
     } else {
-        alert('Er bestaat nog geen account. Registreer je account nu');
+        notification.classList.add('error');
+        notification.classList.replace('none', 'block');
+        notification.innerHTML = "No existing account, please create one";
         location.href = '/index.html';
     }
 };
