@@ -1,14 +1,22 @@
 let existingAccount = false,
-    voornaam = document.getElementById('firstName');
+    password = document.getElementById('newPass'),
+    submit = document.getElementById('confirm');
+
 checkAccount();
 
 function checkAccount() {
     console.log(localStorage);
-    if (localStorage.getItem("email") === null) {
-        alert('Je moet eerst inloggen');
+    if (localStorage.email == null) {
         location.href = '/index.html';
     } else {
         existingAccount = true;
-        voornaam.innerHTML = localStorage.firstname;
     }
 }
+
+submit.addEventListener('click', function(e) {
+    e.preventDefault()
+    if (existingAccount == true) {
+        localStorage.setItem('pw', password.value);
+        location.href = 'readytostart.html';
+    }
+})
