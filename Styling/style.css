@@ -6,6 +6,35 @@
 }
 
 
+/* Javascript classes  */
+
+.block {
+    display: block;
+}
+
+.none {
+    display: none;
+}
+
+.true {
+    opacity: 1.0;
+    cursor: pointer;
+}
+
+.false {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.error {
+    background-color: #98000099;
+}
+
+.succes {
+    background-color: #008000bd;
+}
+
+
 /* body */
 
 body {
@@ -18,7 +47,17 @@ footer {
 }
 
 
-/* tekst */
+/* text */
+
+#notification {
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    padding: 15px 0px;
+    font-size: 16px;
+    font-weight: bold;
+}
 
 h1 {
     font-weight: bold;
@@ -98,13 +137,12 @@ img.succesicon {
     margin: auto;
 }
 
-
-}
-#registratiestart {
+#registrationstart {
     margin: 20px 0px;
     text-align: center;
 }
-#registratiebutton {
+
+#registrateButton {
     padding: 15px 40px;
     background-color: #ffab3d00;
     border-radius: 20px;
@@ -115,15 +153,19 @@ img.succesicon {
     text-decoration: none;
     text-transform: uppercase;
 }
-#registratiebutton:hover {
+
+#registrateButton:hover {
     background-color: #FF9200;
 }
 
+
 /* forms */
+
 form {
     max-width: 600px;
     margin: auto;
 }
+
 input[type=text],
 input[type=email],
 input[type=password],
@@ -135,6 +177,7 @@ input[type=date] {
     font-weight: bold;
     opacity: 0.8;
 }
+
 fieldset {
     border: 0;
     color: white;
@@ -142,20 +185,24 @@ fieldset {
     border-bottom: 3px solid white;
     padding: 0px 0px 25px 0px;
 }
+
 legend {
     text-align: center;
     padding: 10px;
     font-size: 2rem;
 }
+
 input:valid {
     border: 5px solid #88FF9F;
     opacity: 1;
     background-color: white;
 }
+
 input:focus {
     padding: 30px 15px;
     opacity: 1;
 }
+
 input[type=radio] {
     display: inline-block;
     vertical-align: middle;
@@ -164,6 +211,7 @@ input[type=radio] {
     position: fixed;
     width: 0;
 }
+
 fieldset:nth-child(2) label {
     display: inline-block;
     cursor: pointer;
@@ -174,13 +222,16 @@ fieldset:nth-child(2) label {
     border: 2px solid #444;
     border-radius: 4px;
 }
+
 fieldset:nth-child(2) label:hover {
     border: 4px solid #4c4;
 }
+
 fieldset:nth-child(2) input[type="radio"]:checked+label {
     background-color: #007241;
     border-color: #4c4;
 }
+
 input[type=submit] {
     background-color: #FF9200;
     font-size: 20px;
@@ -188,15 +239,18 @@ input[type=submit] {
     border: 0;
     text-transform: uppercase;
 }
+
 input[type=submit]:hover {
     background-color: #FFAD40;
 }
+
  ::placeholder {
     color: #555555;
     font-size: 16px;
     opacity: 0.55;
     font-weight: lighter;
 }
+
 form input {
     cursor: pointer;
     height: 3.2rem;
@@ -207,7 +261,9 @@ form input {
     box-sizing: border-box;
 }
 
+
 /* footer */
+
 footer {
     text-align: center;
     bottom: 0;

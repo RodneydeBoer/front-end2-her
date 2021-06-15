@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
     <meta http-equiv="X-UA-Compatible">
-    <link rel="stylesheet" href="Styling/style.css">
-    <link rel='shortcut icon' type='image/x-icon' href='../Images/favicon.ico' />
+    <link rel="stylesheet" href="styling/style.css">
+    <link rel='shortcut icon' type='image/x-icon' href='../images/favicon.ico' />
     <title>FishR</title>
 </head>
 
@@ -15,25 +15,26 @@
         <h1>Welcome at FishR - Find your Fishmate</h1>
     </header>
     <main>
-        <form action="Pages/readytostart.html" autocomplete="off">
+        <p id="notification"></p>
+        <form action="pages/readyToStart.html" autocomplete="off">
             <input type="email" id="email" required name="email" minlength="6" maxlength="60" placeholder="Email">
-            <input type="password" id="wachtwoord" required name="wachtwoord" placeholder="Wachtwoord">
-            <input type="submit" id="inlogknop" value="inloggen">
+            <input type="password" id="password" required name="password" placeholder="Pass">
+            <input type="submit" id="loginBtn" value="Log in">
         </form>
 
     </main>
     <footer>
-        <section id="registratiestart">
+        <section id="registrationstart">
             <header>
-                <h3>Nog geen account?</h3>
+                <h3>Or create an account here</h3>
             </header>
             <article>
-                <a href="Pages/registration.html" id="registratiebutton">registreren</a>
+                <a href="pages/registration.html" id="registrateButton">Create account</a>
             </article>
         </section>
-        <script type="text/javascript" src="../Scripts/login.js"></script>
         <h2><a href="https://rodneydeboer.github.io/front-end2-her/">FishR</a></h2>
     </footer>
+    <script type="text/javascript" src="/scripts/login.js"></script>
 </body>
 
 </html>

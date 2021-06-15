@@ -1,5 +1,5 @@
 let existingAccount = false,
-    firstName = document.getElementById('firstName');
+    voornaam = document.getElementById('firstName');
 checkAccount();
 
 function checkAccount() {
@@ -9,6 +9,6 @@ function checkAccount() {
         location.href = '/index.html';
     } else {
         existingAccount = true;
-        firstName.innerHTML = localStorage.firstname;
+        voornaam.innerHTML = localStorage.firstname;
     }
 }

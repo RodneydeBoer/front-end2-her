@@ -1,7 +1,7 @@
 let form = document.querySelector('form'),
     email = document.getElementById('email'),
-    password = document.getElementById('wachtwoord'),
-    submit = document.getElementById('inlogknop'),
+    password = document.getElementById('password'),
+    submit = document.getElementById('loginBtn'),
     existingAccount = false,
     fieldvalidate = false;
 
@@ -33,8 +33,7 @@ function validateForm() {
         fieldvalidate = true;
     } else {
         submit.disabled = true
-        submit.style.opacity = "0.5";
-        submit.style.cursor = "not-allowed";
+        submit.classList.add('false');
     }
 }
 
@@ -43,8 +42,7 @@ form.addEventListener('keydown', function() {
     validateForm();
     if (fieldvalidate == true) {
         submit.disabled = false
-        submit.style.opacity = "1";
-        submit.style.cursor = "pointer";
+        submit.classList.replace('false', 'true');
     }
 });
 

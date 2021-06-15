@@ -5,53 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
     <meta http-equiv="X-UA-Compatible">
-    <link rel="stylesheet" href="../Styling/style.css">
-    <link rel='shortcut icon' type='image/x-icon' href='../Images/favicon.ico' />
+    <link rel="stylesheet" href="../styling/style.css">
+    <link rel='shortcut icon' type='image/x-icon' href='../images/favicon.ico' />
     <title>FishR</title>
 </head>
 
 <body id="registration">
     <header>
-        <h1>Aanmelden bij FishR</h1>
+        <h1>Creating account at FishR</h1>
     </header>
     <main>
         <section>
             <article>
-                <form action="loading-registration.html" id="registration">
+                <p id="notification"> </p>
+                <form action="readytostart.html" id="registration">
                     <fieldset id="personalia">
                         <legend>Personalia</legend>
-                        <label for="voornaam">Voornaam</label>
-                        <input type="text" required name='voornaam' id="voornaam" placeholder='B.v Rob'>
-                        <label for="achternaam ">Achternaam</label>
-                        <input type="text" required name='achternaam' id="achternaam" placeholder="B.v de Vries ">
-                        <label for="geboortedatum ">Geboortedatum</label>
-                        <input type="date" required id="gebDatum" name="geboortedatum">
+                        <label for="firstName">First name</label>
+                        <input type="text" required name='firstName' id="firstName" placeholder='B.v Rob'>
+                        <label for="lastName ">Last name</label>
+                        <input type="text" required name='lastName' id="lastName" placeholder="B.v de Vries ">
+                        <label for="dateOfBirth ">Date of birth</label>
+                        <input type="date" required id="dateOfBirth" name="dateOfBirth">
                     </fieldset>
-                    <fieldset id="voorkeur">
-                        <legend>Voorkeur:</legend>
-                        <input type="radio" name='voorkeur' id="voorkeur" value="witvis" checked>
-                        <label for="witvis">Witvis</label>
-                        <input type="radio" name='voorkeur' id="voorkeur" value="roofvis">
-                        <label for="roofvis">Roofvis</label>
-                        <input type="radio" name='voorkeur' id="beiden" value="beiden">
-                        <label for="beiden">Beiden</label>
+                    <fieldset id="preference">
+                        <legend>Preference:</legend>
+                        <input type="radio" name='preference' value="carp" checked>
+                        <label for="carp">Carp</label>
+                        <input type="radio" name='preference' value="predators">
+                        <label for="predators">Predators</label>
+                        <input type="radio" name='preference' value="both">
+                        <label for="both">Both</label>
                     </fieldset>
-                    <fieldset id="inloggegevens">
-                        <legend>Inloggegevens</legend>
+                    <fieldset id="loginDetails">
+                        <legend>Account</legend>
                         <label for="email">Email</label>
                         <input type="email" id="email" required name="email" minlength="6 " maxlength="60 " placeholder="B.v blabla@outlook.com ">
-                        <label for='wachtwoord'>Wachtwoord</label>
-                        <input type="password" id="wachtwoord" required name="wachtwoord" minlength="6 " placeholder="Minimaal 6 tekens ">
+                        <label for='password'>Password</label>
+                        <input type="password" id="password" required name="password" minlength="6 " placeholder="at least 6 characters ">
                     </fieldset>
-                    <input type="submit" id="submit" value="Registreren">
+                    <input type="submit" id="registrateBtn" value="registrate">
                 </form>
             </article>
         </section>
     </main>
     <footer>
-        <script type="text/javascript" src="../Scripts/registreren.js"></script>
         <h2><a href="https://rodneydeboer.github.io/front-end2-her/">FishR</a></h2>
     </footer>
+    <script type="text/javascript" src="../scripts/registrate.js"></script>
 </body>
 
 </html>

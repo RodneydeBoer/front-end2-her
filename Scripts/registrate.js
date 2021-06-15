@@ -1,20 +1,22 @@
 let fieldset = document.getElementsByTagName('fieldset'),
     form = document.querySelector('form'),
-    firstName = document.getElementById('voornaam'),
-    preference = document.querySelector('input[name="voorkeur"]:checked'),
-    lastName = document.getElementById('achternaam'),
-    dateBirth = document.getElementById('gebDatum'),
+    firstName = document.getElementById('firstName'),
+    preference = document.querySelector('input[name="preference"]:checked'),
+    lastName = document.getElementById('lastName'),
+    dateBirth = document.getElementById('dateOfBirth'),
     email = document.getElementById('email'),
-    password = document.getElementById('wachtwoord'),
-    submit = document.getElementById('submit'),
+    password = document.getElementById('password'),
+    submit = document.getElementById('registrateBtn'),
+    notification = document.getElementById('notification'),
     textvalidate = false,
     fieldvalidate = false;
-const numbers = /^[0-9]+$/;
+const numbers = /[0-9]/;
 
 // Hiding second fieldset for now
-fieldset[1].style.display = "none";
-fieldset[2].style.display = "none";
-submit.style.display = "none";
+fieldset[1].classList.add('none');
+fieldset[2].classList.add('none');
+submit.classList.add('none');
+notification.classList.add('none');
 
 // automatic check for loggedin user
 checkLogin();
@@ -30,21 +32,26 @@ submit.addEventListener('click', function(e) {
 // checking if localstorage has data, and if it does it redirects back to login
 function checkLogin() {
     console.log(localStorage);
-    if (localStorage.getItem("email") === null) {
+    if (localStorage.email == null) {
 
     } else {
-        alert('Je hebt al een account. U wordt nu doorgestuurd');
-        location.href = '/index.html';
+        fieldset[0].classList.add('none');
+        notification.classList.add('error');
+        notification.classList.replace('none', 'block');
+        notification.innerHTML = "Je hebt al een account. <a href='/index.html '> Log hier in</a>";
     }
 }
 
 // Function to check if the input contains numbers
 function verifyInput() {
-    if (firstName.value.match(numbers) && lastName.value.match(numbers)) {
-        alert('Geen cijfers gebruiken bij namen');
+    if (firstName.value.match(numbers) || lastName.value.match(numbers)) {
+        notification.classList.add('error');
+        notification.classList.replace('none', 'block');
+        notification.innerHTML = "No other characters than A-Z at name";
         textvalidate = false;
     } else {
         textvalidate = true;
+        notification.classList.replace('block', 'none');
     }
 }
 
@@ -63,9 +70,9 @@ form.addEventListener('keydown', function() {
     validateFieldset1();
 
     if (fieldvalidate) {
-        fieldset[1].style.display = "block";
-        fieldset[2].style.display = "block";
-        submit.style.display = "block";
+        fieldset[1].classList.replace("none", "block");
+        fieldset[2].classList.replace("none", "block");
+        submit.classList.replace("none", "block");
     }
 });
 
