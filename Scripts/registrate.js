@@ -10,12 +10,13 @@ let fieldset = document.getElementsByTagName('fieldset'),
     notification = document.getElementById('notification'),
     textvalidate = false,
     fieldvalidate = false;
-const numbers = /^[0-9]+$/;
+const numbers = /[0-9]/;
 
 // Hiding second fieldset for now
 fieldset[1].classList.add('none');
 fieldset[2].classList.add('none');
 submit.classList.add('none');
+notification.classList.add('none');
 
 // automatic check for loggedin user
 checkLogin();
@@ -31,21 +32,26 @@ submit.addEventListener('click', function(e) {
 // checking if localstorage has data, and if it does it redirects back to login
 function checkLogin() {
     console.log(localStorage);
-    if (localStorage.getItem("email") === null) {
+    if (localStorage.email == null) {
 
     } else {
-        alert('Je hebt al een account. U wordt nu doorgestuurd');
-        location.href = '/index.html';
+        fieldset[0].classList.add('none');
+        notification.classList.add('error');
+        notification.classList.replace('none', 'block');
+        notification.innerHTML = "Je hebt al een account. <a href='/index.html '> Log hier in</a>";
     }
 }
 
 // Function to check if the input contains numbers
 function verifyInput() {
-    if (firstName.value.match(numbers) && lastName.value.match(numbers)) {
-        alert('Geen cijfers gebruiken bij namen');
+    if (firstName.value.match(numbers) || lastName.value.match(numbers)) {
+        notification.classList.add('error');
+        notification.classList.replace('none', 'block');
+        notification.innerHTML = "No other characters than A-Z at name";
         textvalidate = false;
     } else {
         textvalidate = true;
+        notification.classList.replace('block', 'none');
     }
 }
 

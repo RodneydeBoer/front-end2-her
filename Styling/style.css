@@ -142,7 +142,7 @@ img.succesicon {
     text-align: center;
 }
 
-#registrateBtn {
+#registrateButton {
     padding: 15px 40px;
     background-color: #ffab3d00;
     border-radius: 20px;
@@ -154,7 +154,7 @@ img.succesicon {
     text-transform: uppercase;
 }
 
-#registrateBtn:hover {
+#registrateButton:hover {
     background-color: #FF9200;
 }
 
